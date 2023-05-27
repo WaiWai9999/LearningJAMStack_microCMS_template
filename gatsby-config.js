@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://devpediacode.com`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-microcms`,
