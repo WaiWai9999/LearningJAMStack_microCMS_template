@@ -30,6 +30,9 @@
     "react-icons": "^4.9.0",
     "react-share": "^4.4.1"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "devDependencies": {
     "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
