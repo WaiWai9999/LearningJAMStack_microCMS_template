@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import { Table, Col, Row } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Helmet from 'react-helmet';
 import Prism from "prismjs";
 import "../style/layout.scss";
 import "prismjs/themes/prism.css";
@@ -30,6 +31,7 @@ import "prismjs/components/prism-yaml";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactHtmlParser from "react-html-parser";
+import homeImg from "../images/home.png";
 
 import {
   FacebookShareButton,
@@ -285,6 +287,9 @@ const InformationPost = ({ data }) => {
                   <EmailIcon size={32} round />
                 </EmailShareButton>
               </div>
+              <Helmet>
+                    <meta property="og:image" content={homeImg} />
+                </Helmet>
             </Col>
           </Row>
         </Table>
