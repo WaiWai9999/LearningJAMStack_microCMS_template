@@ -271,12 +271,11 @@ const InformationPost = ({ data }) => {
 
                 <TwitterShareButton
                   url={shareUrl}
-                  quote={"Dummy text!"}
                   hashtag="#muo"
                 >
                   <TwitterIcon size={32} round />
                 </TwitterShareButton>
-                <LineShareButton url={shareUrl} quote={"Dummy text!"}>
+                <LineShareButton url={shareUrl} >
                   <LineIcon size={32} round />
                 </LineShareButton>
                 <EmailShareButton
@@ -289,6 +288,8 @@ const InformationPost = ({ data }) => {
               </div>
               <Helmet>
                     <meta property="og:image" content={homeImg} />
+                    <meta property="twitter:image" content={homeImg} />
+                    <meta property="twitter:card" content="summary_large_image" />
                 </Helmet>
             </Col>
           </Row>
