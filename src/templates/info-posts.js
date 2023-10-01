@@ -92,7 +92,7 @@ const InformationPost = ({ data }) => {
 
   const parseContent = bodyContents => {
     const tableClass = "postTable";
-
+    console.log(bodyContents);
     const options = {
       transform: (node, index) => {
         if (
@@ -194,6 +194,20 @@ const InformationPost = ({ data }) => {
               );
             }
           }
+        } else if (domNode.name === "figure") {
+          console.log("figure");
+          const srcAttribute = domNode.srcAttribute || "";
+          const altAttribute = domNode.altAttribute || "";
+          return (
+            <div className="imgContainer">
+              <img
+                className="imgStyle"
+                key={domNode.index}
+                src={srcAttribute}
+                alt={altAttribute}
+              />
+            </div>
+          );
         }
       },
     };
