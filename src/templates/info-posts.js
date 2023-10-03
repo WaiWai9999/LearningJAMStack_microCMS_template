@@ -287,9 +287,10 @@ const InformationPost = ({ data }) => {
                 </EmailShareButton>
               </div>
               <Helmet>
-                    <meta property="og:image" content={homeImg} />
-                    <meta property="twitter:image" content={homeImg} />
-                    <meta property="twitter:card" content="summary_large_image" />
+                    <meta property="og:title" content={post.title} />
+                    <meta property="og:type" content="article" />
+                    <meta property="og:image" content={post.image.url} />
+                    <meta property="og:url" content={`/information/${post.id}`} />
                 </Helmet>
             </Col>
           </Row>
@@ -307,6 +308,9 @@ export const query = graphql`
       id
       title
       date(formatString: "YYYY 年 MM 月 DD 日")
+      image {
+        url
+      }
       author {
         author
       }
