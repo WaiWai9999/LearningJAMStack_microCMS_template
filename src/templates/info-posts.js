@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import { Table, Col, Row } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Helmet from 'react-helmet';
+import Helmet from "react-helmet";
 import Prism from "prismjs";
 import "../style/layout.scss";
 import "prismjs/themes/prism.css";
@@ -54,7 +54,7 @@ const customDarcula = {
   },
   "@media (max-width: 767px)": {
     'code[class*="language-"]': {
-      fontSize: "14px",
+      fontSize: "12px",
       backgroundColor: "black",
     },
   },
@@ -74,7 +74,25 @@ const InformationPost = ({ data }) => {
   useEffect(() => {
     setShareUrl(window.location.href);
     Prism.highlightAll();
+    //adjustImageSize();
+    //window.addEventListener("resize", adjustImageSize);
   }, []);
+
+  // Function to adjust image size based on its dimensions
+  const adjustImageSize = () => {
+    const imageElement = document.querySelector(".imgStyle");
+    if (window.innerWidth <= 767) {
+      if (imageElement) {
+        if (imageElement.width >= 350) {
+          imageElement.style.width = "100%";
+        } else {
+          imageElement.style.width = "50%";
+        }
+      }
+    } else {
+      imageElement.style.width = "100%"; // Reset to 100% width for larger screens
+    }
+  };
 
   const getCodeElements = htmlString => {
     const parser = new DOMParser();
@@ -196,6 +214,20 @@ const InformationPost = ({ data }) => {
               );
             }
           }
+        } else if (domNode.name === "figure") {
+          console.log("figure");
+          const srcAttribute = domNode.srcAttribute || "";
+          const altAttribute = domNode.altAttribute || "";
+          return (
+            <div className="imgContainer">
+              <img
+                className="imgStyle"
+                key={domNode.index}
+                src={srcAttribute}
+                alt={altAttribute}
+              />
+            </div>
+          );
         }
       },
     };
@@ -269,13 +301,10 @@ const InformationPost = ({ data }) => {
                   <FacebookIcon size={32} round />
                 </FacebookShareButton>
 
-                <TwitterShareButton
-                  url={shareUrl}
-                  hashtag="#muo"
-                >
+                <TwitterShareButton url={shareUrl} hashtag="#muo">
                   <TwitterIcon size={32} round />
                 </TwitterShareButton>
-                <LineShareButton url={shareUrl} >
+                <LineShareButton url={shareUrl}>
                   <LineIcon size={32} round />
                 </LineShareButton>
                 <EmailShareButton
@@ -287,11 +316,11 @@ const InformationPost = ({ data }) => {
                 </EmailShareButton>
               </div>
               <Helmet>
-                    <meta property="og:title" content={post.title} />
-                    <meta property="og:type" content="article" />
-                    <meta property="og:image" content={post.image.url} />
-                    <meta property="og:url" content={`/information/${post.id}`} />
-                </Helmet>
+                <meta property="og:title" content={post.title} />
+                <meta property="og:type" content="article" />
+                <meta property="og:image" content={post.image.url} />
+                <meta property="og:url" content={`/information/${post.id}`} />
+              </Helmet>
             </Col>
           </Row>
         </Table>

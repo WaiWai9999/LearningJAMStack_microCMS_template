@@ -94,7 +94,7 @@ const InformationPage = ({ location, data }) => {
                           </Link>
                         </Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">
-                          {node.date}
+                          <p className="post-date">{node.date}</p>
                         </Card.Subtitle>
                       </div>
                     </div>
