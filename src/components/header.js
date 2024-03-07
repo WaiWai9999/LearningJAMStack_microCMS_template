@@ -32,6 +32,15 @@ const Header = ({ siteTitle }) => (
             お問い合わせ
           </Nav.Link>
         </NavItem>
+        <NavItem href="/about">
+          <Nav.Link
+            as={Link}
+            style={{ align: "bottom" }}
+            activeClassName="active"
+            to="/abouthis">
+            DevpediaCodeについて
+          </Nav.Link>
+        </NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
