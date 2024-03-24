@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 const abouthis = () => (
   <Layout>
     <SEO title="About This Site" />
+    <p></p>
     <h3>当サイトについて</h3>
     <p>
       DevpediaCodeはWeb、AI、Iot、ローコードなどプログラムに関する最新ITテーマの情報を発信するメディアです。
