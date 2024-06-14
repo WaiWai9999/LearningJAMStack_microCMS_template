@@ -170,6 +170,14 @@ span.token.operator {
 .margin-left-5 {
   margin-left: 5px;
 }
+.editorial {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  @media (max-width: 500px) {
+    margin-left: -15px !important;
+    margin-bottom: 10px !important;
+  }
+}
 .imgContainer{
   margin: 0px; 
   padding: 0px;
