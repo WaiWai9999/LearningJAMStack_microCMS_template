@@ -276,6 +276,20 @@ const InformationPost = ({ data }) => {
           <Row>
             <Col className="space"></Col>
           </Row>
+          <Row className="editorial">
+            <Col>
+              <h3>
+                <b>DevpediaCode編集部</b>
+              </h3>
+              <p>
+                DevpediaCodeはWeb、AI、Iot、ローコードなどプログラムに関する最新ITテーマの情報を発信するメディアです。
+              </p>
+              <p>お問合せ下記のURLからお願いします。</p>
+              <a href="https://devpediacode.com/contact" target="_blank">
+                https://devpediacode.com/contact
+              </a>
+            </Col>
+          </Row>
           <Row className="back-link-row">
             <Col>
               <Link to="/" className="btn btn-primary back-link-design">
