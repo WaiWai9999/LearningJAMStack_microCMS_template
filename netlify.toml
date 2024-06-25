@@ -1,0 +1,19 @@
+# netlify.toml
+
+[build]
+  publish = "public"
+  command = "gatsby build"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    # Add more headers as needed for your specific use case, e.g., for Google AdSense
+
+# Example of setting cookies for Google AdSense
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Set-Cookie = """
+      test_cookie=CheckForPermission; SameSite=None; Secure; Path=/;
+    """
