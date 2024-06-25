@@ -20,28 +20,15 @@ const Layout = ({ children }) => {
   const pageTitle = `${data.site.siteMetadata.title} | DevpediaCode`;
   const logoSrc = require("../images/favicon200.png");
 
-  useEffect(() => {
-    // Create script element
-    const script = document.createElement("script");
-    script.src =
-      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1134938100904308";
-    script.async = true;
-    script.crossOrigin = "anonymous";
-
-    // Append script to head
-    document.head.appendChild(script);
-
-    // Clean up script element when component unmounts
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
   return (
     <div className="layout-container">
       <Helmet>
         <title>{pageTitle}</title>
         <link rel="icon" type="image/png" href={logoSrc} />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1134938100904308"
+        ></script>
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
 
