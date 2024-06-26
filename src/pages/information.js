@@ -118,7 +118,7 @@ const InformationPage = ({ location, data }) => {
               </Link>
             </Card.Body>
           </Col>
-          <Col>
+          {/* <Col>
             <Card.Body className="share-btn-card-body">
               <div className="share-button-container d-flex align-items-center justify-content-center justify-content-md-end">
                 <p style={{ padding: "5% 0% 0% 0%" }}>Share:</p>
@@ -150,7 +150,7 @@ const InformationPage = ({ location, data }) => {
                 </EmailShareButton>
               </div>
             </Card.Body>
-          </Col>
+          </Col> */}
         </Row>
       </Table>
     </Layout>
