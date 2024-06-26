@@ -113,7 +113,7 @@ const IndexPage = ({ data }) => {
           <tr className="borderStyle">
             <td colSpan="2">{createArticleCards(data.ai.edges, "AI")}</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td colSpan="2">
               <ins
                 className="adsbygoogle"
@@ -128,7 +128,7 @@ const IndexPage = ({ data }) => {
                 {`(adsbygoogle = window.adsbygoogle || []).push({});`}
               </script>
             </td>
-          </tr>
+          </tr> */}
         </tbody>
       </Table>
     </Layout>
