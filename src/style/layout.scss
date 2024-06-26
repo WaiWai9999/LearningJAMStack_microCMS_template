@@ -379,6 +379,10 @@ code[class*="language-"], pre[class*="language-"] {
   flex-direction: column;
 }
 
+.about-container {
+  margin: 60px 0px 0px 0px;
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
   figure img{
@@ -520,5 +524,8 @@ code[class*="language-"], pre[class*="language-"] {
   }
   .card-subtitle .post-date{
     font-size: 0.8rem !important;
+  }
+  .about-container {
+    margin: 60px 0px 0px 0px;
   }
 }
