@@ -416,6 +416,9 @@ code[class*="language-"], pre[class*="language-"] {
     padding: 0.4rem;
     margin: 3% 0% 0% 0%;
   }
+  Table.post-details-table{
+    margin-top: 15px;
+  }
   Table.post-details-table td {
     padding: 5px;
   }
@@ -433,11 +436,11 @@ code[class*="language-"], pre[class*="language-"] {
     font-size: 14px;
   }
   .post-details-title-font {
-    font-size: 1.4rem;
-    font-weight:300;
+    font-size: 1.8rem;
+    font-weight:500;
   }
   .post-details-body{
-    margin: 0px;
+    margin: 15px 0px 0px 0px;
   }
   .post-details-body table{
     flex-direction: row;
@@ -473,7 +476,7 @@ code[class*="language-"], pre[class*="language-"] {
   }
   .contact-page {
     height: auto;
-    padding: 2rem;
+    //padding: 2rem;
   }
   .content-container{
     padding-top: 11.5%;
