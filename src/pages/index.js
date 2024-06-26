@@ -113,6 +113,22 @@ const IndexPage = ({ data }) => {
           <tr className="borderStyle">
             <td colSpan="2">{createArticleCards(data.ai.edges, "AI")}</td>
           </tr>
+          <tr>
+            <td colSpan="2">
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-1134938100904308"
+                data-ad-slot="2867513240"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+                //adTest='on'
+              ></ins>
+              <script>
+                {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+              </script>
+            </td>
+          </tr>
         </tbody>
       </Table>
     </Layout>
