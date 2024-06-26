@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
-import "../style/common.scss";
 import SEO from "../components/seo";
+import "../style/common.scss";
 
 const abouthis = () => (
   <Layout>
