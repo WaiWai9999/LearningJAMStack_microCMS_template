@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
     for (let i = 0; i < articles.length; i += articlesPerRow) {
       const row = articles.slice(i, i + articlesPerRow).map(({ node }) => (
         <Col key={node.id} md={6}>
-          <Card style={{ marginBottom: "1rem" }}>
+          <Card style={{ marginBottom: "1rem" }} className="card-deco">
             <Link to={`/information/${category}/${node.id}`}>
               <Card.Img
                 variant="top"
@@ -30,7 +30,10 @@ const IndexPage = ({ data }) => {
                 className="index-category-img"
               />
               <Card.Body>
-                <Card.Title className="index-category-title">
+                <Card.Title
+                  className="index-category-title"
+                  style={{ textDecoration: "none !important" }}
+                >
                   {node.title}
                 </Card.Title>
                 <Link

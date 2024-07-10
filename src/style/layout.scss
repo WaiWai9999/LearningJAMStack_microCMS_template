@@ -47,7 +47,15 @@ nav.navBg{
 }
 .index-category-title {
   height: auto;
-  object-fit: cover;
+  text-decoration: none;
+}
+.index-category-title:hover {
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 600;
+}
+.card-deco *:hover{
+  text-decoration: none !important;
 }
 .index-category-img {
   height: 300px;
@@ -88,7 +96,7 @@ Table.info {
   align-items: center;
   flex-direction: row; 
   justify-content: space-between;
-  
+
   //flex-direction: column; 
 }
 .info-card-img {
@@ -261,6 +269,11 @@ span.token.operator {
   align-items: center;
   height: auto;
   margin-top: 3.5%;
+}
+
+.card-title-link:hover{
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* ページ共通CSS */

@@ -87,7 +87,7 @@ const InformationPage = ({ location, data }) => {
                     <div style={{ flex: 1 }}>
                       <div className="info-card-title">
                         <Card.Title>
-                          <Link
+                          <Link className="card-title-link"
                             to={`/information/${node.category.category}/${node.id}`}
                           >
                             {node.title}
