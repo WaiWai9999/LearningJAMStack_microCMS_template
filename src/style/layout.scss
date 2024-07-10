@@ -34,6 +34,9 @@ nav.navBg{
   width: 100%;
   margin: 5.2% 0% 1.5% 0%;
 }
+.index-table{
+  padding-top: 3%;
+}
 .index-table-body{
   border-collapse: collapse;
   border-color: cornflowerblue 1px;
@@ -70,36 +73,51 @@ Table.info {
     border: 1px solid rgba(0,0,0,.125);
     border-collapse: collapse;
     padding-top: 3%;
+
+    display: block;
+    flex-wrap: wrap;
 }
 .info-card{
   margin-top: 1rem;
   display: flex;
+
+  flex-direction: column;
 }
 .info-card-body{
   display: flex;
   align-items: center;
+  flex-direction: row; 
+  justify-content: space-between;
+  
+  //flex-direction: column; 
 }
 .info-card-img {
   margin-left: 5px;
   width: 150px;
   height: 100px;
   object-fit: cover;
+  flex-shrink: 0;
+
+  // width: 100%; 
+  // height: auto; 
+  // margin-top: 10px;
 }
 .info-category-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 10px;
 }
+
 .info-category-link {
-  display: block;
-  width: 100%;
+  flex: 1 1 calc(25% - 10px); 
   text-align: center;
   padding: 0.5rem;
   background-color: #f0f0f0;
   border: none;
   cursor: pointer;
-  white-space: normal;
 }
+
 .info-category-link.active {
   background-color: #ccc;
 }
@@ -395,13 +413,22 @@ code[class*="language-"], pre[class*="language-"] {
   code[class*="language-"], pre[class*="language-"] {
     font-size: 11px !important;
   }
+  .index-table{
+    padding-top: 15%;
+  }
   .postTable {
     border-collapse: collapse !important;
     height:100%;
     width:100%;
   }
   .home-img{
-    margin: 1.2% 0% 1.5% 0%;
+    margin: 15% 0% 0% 0%;
+  }
+  .article-row{
+    margin-top: 55px;
+  }
+  .info-category-link {
+    flex: 1 1 calc(50% - 10px); /* Two buttons in one row on mobile */
   }
   .info .back-link-design{
     width: 40%;
@@ -413,8 +440,21 @@ code[class*="language-"], pre[class*="language-"] {
   }
   .info-title-obj {
     font-size: 1rem;
-    padding: 0.4rem;
-    margin: 3% 0% 0% 0%;
+    margin: 15% 0% 0% 0%;
+  }
+  .info-card-body {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .info-card-img {
+    width: 100%; 
+    height: auto; 
+    margin-top: 10px;
+  }
+
+  .info-card-title {
+    margin-bottom: 10px; /* Space between title and image */
   }
   Table.post-details-table{
     margin-top: 15px;
