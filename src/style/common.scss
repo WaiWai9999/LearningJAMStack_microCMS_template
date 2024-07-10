@@ -27,27 +27,6 @@ nav.navBg{
 }
 
 /* information.js */
-.info-category-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-}
-
-.info-category-link {
-  display: block;
-  width: 20%;
-  text-align: center;
-  padding: 0.5rem;
-  background-color: #f0f0f0;
-  border: none;
-  cursor: pointer;
-  white-space: normal;
-}
-  
-.info-category-link.active {
-  background-color: #ccc;
-}
-
 .info-row {
   margin: 0px 10px 0px 10px !important;
 }
