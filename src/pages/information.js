@@ -44,14 +44,14 @@ const InformationPage = ({ location, data }) => {
   return (
     <Layout>
       <SEO title="記事一覧" />
-      <Row>
+      <Row className="article-row">
         <Col className="info-title-obj">
           <h1 className="h1-font">記事一覧</h1>
         </Col>
       </Row>
       <Table className="info">
         <Row>
-          <Col className="space"></Col>
+          <Col className="space"></Col> 
         </Row>
         <Row className="info-category-row info-button-row">
           <button
@@ -85,7 +85,7 @@ const InformationPage = ({ location, data }) => {
                 <Card className="info-card">
                   <Card.Body className="info-card-body">
                     <div style={{ flex: 1 }}>
-                      <div>
+                      <div className="info-card-title">
                         <Card.Title>
                           <Link
                             to={`/information/${node.category.category}/${node.id}`}
