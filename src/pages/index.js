@@ -69,7 +69,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Table style={{ paddingTop: "3%" }}>
+      {/* <Table style={{ paddingTop: "3%" }}> */}
+      <Table className="index-table">
         <tbody className="index-table-body">
           <tr>
             <img src={homeImg} className="home-img" alt="Home" />
